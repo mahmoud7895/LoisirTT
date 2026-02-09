@@ -30,3 +30,11 @@ cd backend
 npm install
 # Créez un fichier .env avec vos accès MySQL
 npm run start:dev
+L'application intègre un module d'IA pour traiter les avis laissés par les employés de Tunisie Télécom après chaque événement.
+
+### Fonctionnement :
+1. **Collecte :** Les commentaires sont récupérés via l'API NestJS.
+2. **Traitement :** Le `sentiment_service` analyse le texte (NLP - Natural Language Processing).
+3. **Score :** L'IA attribue une note (Positif, Neutre, Négatif).
+4. **Visualisation :** Les résultats sont affichés sous forme de graphiques dans le Dashboard Admin.
+python sentiment_analysis.py
