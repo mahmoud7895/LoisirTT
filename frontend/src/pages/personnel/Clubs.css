@@ -1,0 +1,238 @@
+/* Style général de la page */
+.clubs {
+    font-family: 'Poppins', sans-serif;
+    background: #4B0082; /* Dégradé bleu nuit -> violet */
+    color: #ffffff; /* Texte blanc */
+    min-height: 100vh;
+    padding-top: 80px; /* Espace pour la navbar fixe */
+}
+
+/* ------------------------- */
+/* Styles du header */
+/* ------------------------- */
+
+/* Style de la navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0a1124;
+    padding: 10px 20px;
+    border-bottom: 2px solid #00ffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Style du logo */
+.navbar-logo img {
+    height: 50px;
+}
+
+/* Conteneur pour les liens */
+.navbar-links-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* Style des liens de la navbar */
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links button {
+    background: none;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-links button:hover {
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Style de la section de déconnexion */
+.logout-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style du bouton de déconnexion */
+.logout-button {
+    color: white;
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+.logout-button:hover {
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    transform: translateY(-3px);
+}
+
+/* ------------------------- */
+/* Styles du contenu principal */
+/* ------------------------- */
+
+/* Conteneur principal */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Section de l'image */
+.image-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espace entre les images */
+    align-items: center;
+}
+
+.content-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Section du formulaire */
+.form-section {
+    width: 40%;
+    background: rgba(0, 0, 50, 0.3); /* Effet translucide bleu */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.4); /* Ombre cyan */
+    text-align: center;
+    color: #ffffff;
+    border: 2px solid rgba(0, 255, 255, 0.5); /* Bordure néon cyan */
+}
+
+/* Style du formulaire */
+.content-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content-form h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* Effet lumineux */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 80px;
+    border: 1px solid rgba(0, 255, 255, 0.5); /* Bordure néon cyan */
+    background: rgba(255, 255, 255, 0.1); /* Fond translucide */
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+/* Placeholder couleur */
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Placeholder gris clair */
+}
+
+/* Animation sur focus */
+.form-group input:focus,
+.form-group select:focus {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Effet lumineux au focus */
+}
+
+/* Bouton principal */
+.form-section button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #00FFFF, #7D00FF); /* Dégradé cyan-violet */
+    color: white;
+    border: none;
+    border-radius: 80px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* Ombre cyan */
+}
+
+/* Effet au survol */
+.form-section button:hover {
+    background: linear-gradient(90deg, #7D00FF, #00FFFF); /* Inversion du dégradé */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1); /* Effet lumineux au survol */
+}
+
+/* ------------------------- */
+/* Responsive Design */
+/* ------------------------- */
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links-container {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .form-section {
+        width: 90%;
+        margin: 20px 0;
+    }
+
+    .image-section {
+        width: 90%;
+        order: -1; /* Image en premier sur mobile */
+    }
+}

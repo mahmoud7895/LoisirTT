@@ -1,0 +1,169 @@
+/* Style général de la page */
+.admin-home {
+    font-family: 'Poppins', sans-serif;
+    background: #FFFFFF; /* Fond blanc */
+    color: #000000; /* Texte noir */
+    min-height: 100vh;
+  }
+  
+  /* Style de la navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #4B0082; /* Violet foncé */
+    color: #FFFFFF; /* Texte blanc */
+    border-bottom: 2px solid #00BCD4; /* Bordure cyan */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Animation du header au survol */
+  .navbar:hover {
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.6);
+    background: #4B0082;
+  }
+  
+  /* Style du logo */
+  .navbar-logo img {
+    height: 70px;
+    width: 90px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar-logo img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgba(0, 188, 212, 0.8));
+  }
+  
+  /* Conteneur pour les liens */
+  .navbar-links-container {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  /* Style des liens de la navbar */
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links a {
+    color: #FFFFFF; /* Texte blanc */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+  }
+  
+  .navbar-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #00BCD4; /* Cyan */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .navbar-links a:hover {
+    color: #00BCD4; /* Cyan au survol */
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.8);
+    transform: translateY(-3px);
+  }
+  
+  .navbar-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Style de la section de déconnexion */
+  .logout-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Style du bouton de déconnexion */
+  .logout-button {
+    color: #FFFFFF; /* Texte blanc */
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+  }
+  
+  .logout-button:hover {
+    color: #00BCD4; /* Cyan au survol */
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.8);
+    transform: translateY(-3px);
+  }
+  
+  /* Style du contenu principal */
+  .admin-content {
+    padding: 20px;
+    text-align: center;
+    background-color: #FFFFFF; /* Fond blanc */
+  }
+  
+  /* Style de la barre de recherche */
+  .search-bar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .search-bar input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #00BCD4; /* Bordure cyan */
+    border-radius: 80px;
+    width: 300px;
+    background: #F5F5F5; /* Gris clair */
+    color: #000000; /* Texte noir */
+    outline: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .search-bar input::placeholder {
+    color: #999;
+  }
+  
+  .search-bar input:focus {
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.8);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-links-container {
+      justify-content: flex-start;
+      width: 100%;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .search-bar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .search-bar input {
+      width: 100%;
+    }
+  
+    .logout-section {
+      margin-top: 10px;
+    }
+  }

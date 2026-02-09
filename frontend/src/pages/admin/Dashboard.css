@@ -1,0 +1,257 @@
+/* Variables CSS */
+:root {
+  --primary-color: #4B0082;
+  --secondary-color: #00BCD4;
+  --accent-color: #AB47BC;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --bg-light: #f4f4f4;
+  --bg-dark: #2c3e50;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --border-radius: 15px;
+  --transition: all 0.3s ease;
+}
+
+/* Reset et styles de base */
+.dashboard {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* En-tête */
+.navbar {
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.navbar-links-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-links button {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+  border-radius: 50px;
+}
+
+.navbar-links button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-links button.active {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.icon-button:hover {
+  color: var(--secondary-color);
+}
+
+/* Contenu principal */
+.dashboard-content {
+  margin-top: 80px;
+  padding: 2rem;
+  background-color: var(--text-light);
+}
+
+.dashboard-content h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Grille des graphiques */
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Conteneurs de graphiques */
+.chart-container {
+  background: var(--bg-dark);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: 2px solid var(--secondary-color);
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+.chart-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.chart-container h2 {
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+/* Graphique spécifique pour les avis */
+.chart-container.reviews-chart {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1A0033 100%);
+}
+
+.reviews-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+}
+
+/* Confirmation de déconnexion */
+.logout-confirmation {
+  text-align: center;
+  padding: 1rem;
+}
+
+.logout-confirmation p {
+  margin-bottom: 1.5rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.form-actions button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: bold;
+}
+
+.form-actions button:first-child {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+}
+
+.form-actions button:last-child {
+  background-color: #e0e0e0;
+  color: var(--text-dark);
+}
+
+/* Media Queries pour le responsive */
+@media (max-width: 1200px) {
+  .chart-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .dashboard-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .navbar-logo {
+    margin-bottom: 1rem;
+  }
+  
+  .navbar-links {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .dashboard-content {
+    margin-top: 150px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-links button {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .chart-container h2 {
+    font-size: 1.1rem;
+  }
+  
+  .dashboard-content h1 {
+    font-size: 1.5rem;
+  }
+}

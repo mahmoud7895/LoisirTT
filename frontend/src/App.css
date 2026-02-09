@@ -1,0 +1,203 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Conteneur principal */
+.app-container {
+  display: flex;
+  height: 100vh;
+  background:#4B0082;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Section gauche : Formulaire */
+.auth-section {
+  width: 40%;
+  background: #FFFFFF; /* Fond blanc */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #000000; /* Texte noir */
+  border: 2px solid #00BCD4; /* Bordure cyan */
+  margin-inline: 50px;
+}
+
+/* Titres */
+.auth-section h1, 
+.auth-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  color: #00BCD4; /* Cyan pour les titres */
+}
+
+/* Champs de saisie */
+.auth-section input,
+.auth-section select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border-radius: 80px;
+  border: 1px solid #00BCD4; /* Bordure cyan */
+  background: #F5F5F5; /* Gris clair */
+  color: #000000; /* Texte noir */
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Placeholder couleur */
+.auth-section input::placeholder {
+  color: #999;
+}
+
+/* Animation sur focus */
+.auth-section input:focus,
+.auth-section select:focus {
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.8);
+}
+
+/* Style spécifique pour le select */
+.auth-section select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(0, 188, 212, 0.7)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 1em;
+  cursor: pointer;
+}
+
+/* Options du select */
+.auth-section select option {
+  background-color: #FFFFFF; /* Fond blanc */
+  color: #000000; /* Texte noir */
+  padding: 10px;
+}
+
+/* Conteneur du mot de passe */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  padding-right: 40px;
+}
+
+/* Bouton de bascule mot de passe */
+.password-toggle-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #00BCD4; /* Cyan pour le bouton */
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.password-toggle-btn:hover {
+  color: #AB47BC; /* Violet clair au survol */
+}
+
+.password-toggle-btn:focus {
+  outline: none;
+}
+
+/* Bouton principal */
+.auth-section button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: #AB47BC; /* Violet clair */
+  color: #FFFFFF; /* Texte blanc */
+  border: none;
+  border-radius: 80px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.8);
+}
+
+/* Effet au survol */
+.auth-section button[type="submit"]:hover {
+  background: #4B0082; /* Violet foncé au survol */
+  box-shadow: 0 0 20px rgba(75, 0, 130, 0.5);
+}
+
+/* Liens */
+.login-link,
+.switch-text span {
+  color: #00BCD4; /* Cyan pour les liens */
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.login-link:hover,
+.switch-text span:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 5px rgba(0, 188, 212, 0.8);
+}
+
+.switch-text {
+  margin-top: 20px;
+  color: #000000; /* Texte noir */
+}
+
+/* Section droite : Image */
+.image-section {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-section img {
+  width: 90%;
+  max-height: 90%;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Message d'erreur */
+.error-message {
+  color: #FF6B6B;
+  margin-top: 10px;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .app-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .auth-section {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .image-section {
+    width: 100%;
+    height: 40%;
+  }
+}

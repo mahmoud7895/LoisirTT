@@ -1,0 +1,229 @@
+/* Style général de la page */
+.evenements {
+    font-family: 'Poppins', sans-serif;
+    background: #4B0082; /* Dégradé bleu nuit -> violet */
+    color: #ffffff; /* Texte blanc */
+    min-height: 100vh;
+    padding-top: 80px; /* Espace pour la navbar fixe */
+}
+
+/* ------------------------- */
+/* Styles du header */
+/* ------------------------- */
+
+/* Style de la navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0a1124;
+    padding: 10px 20px;
+    border-bottom: 2px solid #00ffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Style du logo */
+.navbar-logo img {
+    height: 50px;
+}
+
+/* Conteneur pour les liens */
+.navbar-links-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* Style des liens de la navbar */
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links button {
+    background: none;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-links button:hover {
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Style de la section de déconnexion */
+.logout-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style du bouton de déconnexion */
+.logout-button {
+    color: white;
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+.logout-button:hover {
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    transform: translateY(-3px);
+}
+
+/* ------------------------- */
+/* Styles du contenu principal */
+/* ------------------------- */
+
+/* Conteneur principal */
+.evenements-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Style des cartes d'événements */
+.card {
+    background: rgba(0, 0, 50, 0.3); /* Fond translucide bleu */
+    border: 2px solid rgba(0, 255, 255, 0.5); /* Bordure néon cyan */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.4); /* Ombre cyan */
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.6); /* Effet lumineux au survol */
+}
+
+.card img {
+    border-radius: 15px 15px 0 0;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #00FFFF; /* Titre en cyan */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* Effet lumineux */
+}
+
+.card-text {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.card-text strong {
+    color: #00FFFF; /* Texte en cyan pour les labels */
+}
+
+/* ------------------------- */
+/* Styles du modal */
+/* ------------------------- */
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    z-index: 1000;
+}
+
+.modal-content {
+    background: rgba(0, 0, 50, 0.3); /* Fond translucide bleu */
+    border: 2px solid rgba(0, 255, 255, 0.5); /* Bordure néon cyan */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.4); /* Ombre cyan */
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    color: #ffffff;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.5); /* Bordure néon cyan */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #00FFFF; /* Titre en cyan */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* Effet lumineux */
+}
+
+.modal-body {
+    margin-bottom: 20px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* ------------------------- */
+/* Responsive Design */
+/* ------------------------- */
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links-container {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .evenements-content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 20px 0;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}

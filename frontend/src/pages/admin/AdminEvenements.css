@@ -1,0 +1,325 @@
+/* Style général de la page */
+.activites-sportives {
+  font-family: 'Poppins', sans-serif;
+  background: #FFFFFF; /* Fond blanc */
+  color: #000000; /* Texte noir */
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+/* Styles du header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4B0082; /* Violet foncé */
+  color: #FFFFFF; /* Texte blanc */
+  border-bottom: 2px solid #00BCD4; /* Bordure cyan */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Style du logo */
+.navbar-logo img {
+  height: 70px;
+  width: 90px;
+  transition: all 0.3s ease-in-out;
+  max-width: 100%;
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(0, 188, 212, 0.8));
+}
+
+/* Conteneur pour les liens */
+.navbar-links-container {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+/* Style des liens de la navbar */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links button {
+  background: none;
+  color: #FFFFFF; /* Texte blanc */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  min-height: 44px;
+}
+
+.navbar-links button:hover {
+  color: #00BCD4; /* Cyan au survol */
+  text-shadow: 0 0 10px rgba(0, 188, 212, 0.8);
+  transform: scale(1.05);
+}
+
+/* Style de la section de déconnexion */
+.logout-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Style du bouton de déconnexion */
+.logout-button {
+  color: #FFFFFF; /* Texte blanc */
+  font-size: 24px;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.logout-button:hover {
+  color: #00BCD4; /* Cyan au survol */
+  text-shadow: 0 0 10px rgba(0, 188, 212, 0.8);
+  transform: translateY(-3px);
+}
+
+/* Conteneur principal */
+.activites-content {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: #FFFFFF; /* Fond blanc */
+}
+
+/* Section du formulaire */
+.form-section {
+  width: 100%;
+  max-width: 600px;
+  background: #FFFFFF; /* Fond blanc */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #000000; /* Texte noir */
+  border: 2px solid #00BCD4; /* Bordure cyan */
+}
+
+/* Icônes d'action */
+.icon-button {
+  background: none;
+  border: none;
+  color: #00BCD4; /* Cyan pour les icônes */
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+  padding: 8px;
+  border-radius: 50%;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.icon-button:hover {
+  color: #FFFFFF;
+  background-color: #AB47BC; /* Violet clair au survol */
+  transform: scale(1.1);
+}
+
+.icon-button:active {
+  transform: scale(0.95);
+}
+
+/* Style du formulaire */
+.content-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.content-form h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  color: #00BCD4; /* Cyan pour le titre */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.form-group label {
+  font-size: 16px;
+  color: #000000; /* Texte noir */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 80px;
+  border: 1px solid #00BCD4; /* Bordure cyan */
+  background: #F5F5F5; /* Gris clair */
+  color: #000000; /* Texte noir */
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+.form-group textarea {
+  border-radius: 15px;
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Placeholder couleur */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999;
+}
+
+/* Animation sur focus */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.8);
+}
+
+/* Bouton principal */
+.form-section button {
+  width: 100%;
+  padding: 12px;
+  background: #AB47BC; /* Violet clair */
+  color: #FFFFFF; /* Texte blanc */
+  border: none;
+  border-radius: 80px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.8);
+  min-height: 44px;
+}
+
+/* Effet au survol */
+.form-section button:hover {
+  background: #4B0082; /* Violet foncé au survol */
+  box-shadow: 0 0 20px rgba(75, 0, 130, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-logo img {
+    height: 50px;
+    width: auto;
+  }
+
+  .navbar-links-container {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .navbar-links button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .logout-section {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .activites-content {
+    padding: 10px;
+  }
+
+  .form-section {
+    width: 90%;
+    padding: 20px;
+    margin: 10px auto;
+  }
+
+  .content-form h2 {
+    font-size: 24px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .form-section button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-logo img {
+    height: 40px;
+  }
+
+  .navbar-links button {
+    font-size: 12px;
+  }
+
+  .logout-button {
+    font-size: 20px;
+  }
+
+  .form-section {
+    padding: 15px;
+  }
+
+  .content-form h2 {
+    font-size: 20px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .form-section button {
+    font-size: 12px;
+    padding: 8px;
+  }
+}

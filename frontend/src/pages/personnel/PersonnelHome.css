@@ -1,0 +1,299 @@
+/* Styles spécifiques à la page PersonnelHome */
+
+.personnel-home-content {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.personnel-home-image-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 2050px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.personnel-home-text-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.personnel-home-image-container {
+    width: 70%;
+    height: 700px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.4);
+}
+
+.personnel-home-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.personnel-home-image.fade-out {
+    opacity: 0;
+}
+
+.personnel-home-overlay-text {
+    color: #000000; /* Black color */
+    text-align: left;
+    font-size: 36px;
+    font-weight: 700; /* Bold */
+    margin-bottom: 20px;
+}
+
+.personnel-home-description {
+    color: #000000; /* Black color */
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700; /* Bold */
+    margin-bottom: 30px;
+}
+
+.personnel-home-discover-button {
+    background: linear-gradient(90deg, #00FFFF, #7D00FF);
+    color: white;
+    border: none;
+    padding: 12px 48px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    align-self: flex-start;
+}
+
+.personnel-home-discover-button:hover {
+    background: linear-gradient(90deg, #7D00FF, #00FFFF);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+.personnel-home-section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #258989;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    margin: 40px 0 20px;
+}
+
+.personnel-home-activities-section {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    width: 100%;
+    gap: 20px; /* Space between cards */
+}
+
+.personnel-home-activity-card {
+    background: #4B0082;
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.4);
+    min-width: 30%;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.personnel-home-activity-card:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and slight zoom on hover */
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.8); /* Brighter shadow on hover */
+    background: linear-gradient(to right, #1A1F4D, #3A1A73); /* Slightly lighter gradient on hover */
+}
+
+.personnel-home-activity-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.personnel-home-activity-card:hover img {
+    transform: scale(1.1); /* Zoom in the image on hover */
+}
+
+.personnel-home-activity-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #00FFFF;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    margin-bottom: 15px;
+}
+
+.personnel-home-subscribe-button {
+    background: linear-gradient(90deg, #00FFFF, #7D00FF);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+    align-self: center;
+}
+
+.personnel-home-subscribe-button:hover {
+    background: linear-gradient(90deg, #7D00FF, #00FFFF);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+.personnel-home-footer {
+    background: #4B0082; /* Violet foncé, même couleur que la navbar dans ActivitesSportives.css */
+    color: #FFFFFF; /* Texte blanc */
+    padding: 40px 20px;
+    border-top: 2px solid #00BCD4; /* Bordure cyan, cohérente avec la navbar */
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1); /* Ajustement de l'ombre pour cohérence */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #00BCD4; /* Cyan pour le titre, cohérent avec ActivitesSportives.css */
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.8);
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li button {
+    background: none;
+    border: none;
+    color: #FFFFFF; /* Texte blanc */
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li button:hover {
+    color: #00BCD4; /* Cyan au survol, cohérent avec ActivitesSportives.css */
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.8);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #00BCD4; /* Bordure cyan, cohérente avec ActivitesSportives.css */
+    font-size: 12px;
+    color: #FFFFFF; /* Texte blanc */
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .personnel-home-image-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .personnel-home-text-container {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .personnel-home-image-container {
+        width: 95%;
+        height: 300px;
+    }
+
+    .personnel-home-overlay-text {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .personnel-home-description {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .personnel-home-discover-button {
+        font-size: 16px;
+        padding: 10px 36px;
+        align-self: center;
+    }
+
+    .personnel-home-section-title {
+        font-size: 22px;
+        margin: 30px 0 15px;
+    }
+
+    .personnel-home-activities-section {
+        margin-bottom: 30px;
+    }
+
+    .personnel-home-activity-card {
+        min-width: 80%;
+        margin-right: 10px;
+    }
+
+    .personnel-home-subscribe-button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}

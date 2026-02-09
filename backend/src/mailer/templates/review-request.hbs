@@ -1,0 +1,253 @@
+<html lang='fr'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <title>Votre avis compte !</title>
+    <style>
+      /* Réinitialisation pour compatibilité avec les clients e-mail */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Roboto', 'Arial', sans-serif;
+        background-color: #e5e9ec;
+        color: #333333;
+        line-height: 1.5;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Bannière */
+      .banner {
+        width: 100%;
+        height: 200px;
+        background:
+          linear-gradient(rgba(0, 85, 164, 0.7), rgba(0, 85, 164, 0.7)),
+          url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1470&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        padding: 40px 20px;
+        color: #ffffff;
+      }
+
+      .banner h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .banner p {
+        font-size: 16px;
+        font-weight: 300;
+      }
+
+      /* Contenu */
+      .content {
+        padding: 30px 25px;
+        text-align: center;
+      }
+
+      .content h2 {
+        font-size: 22px;
+        color: #0055a4;
+        margin-bottom: 15px;
+      }
+
+      .highlight {
+        font-size: 16px;
+        color: #d81b60;
+        font-weight: 600;
+        margin: 20px 0;
+        line-height: 1.4;
+      }
+
+      /* Détails de l'événement */
+      .feedback-details {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: #f8fbfd;
+        border-radius: 8px;
+        text-align: left;
+      }
+
+      .feedback-details ul {
+        list-style: none;
+      }
+
+      .feedback-details li {
+        font-size: 15px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+      }
+
+      .feedback-details li img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .feedback-details li strong {
+        color: #0055a4;
+        font-weight: 600;
+        min-width: 120px;
+      }
+
+      /* Bouton CTA */
+      .cta-button {
+        display: inline-block;
+        background-color: #00a1d6;
+        color: #ffffff;
+        padding: 14px 30px;
+        text-decoration: none;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: 600;
+        margin: 20px auto;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background-color: #0088b3;
+      }
+
+      /* Pied de page */
+      .footer {
+        background-color: #0055a4;
+        padding: 20px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 13px;
+      }
+
+      .footer img {
+        max-width: 120px;
+        margin-top: 10px;
+      }
+
+      .footer a {
+        color: #00a1d6;
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsivité */
+      @media only screen and (max-width: 600px) {
+        .container {
+          width: 100%;
+          margin: 10px;
+          border-radius: 0;
+        }
+
+        .banner {
+          height: 150px;
+          padding: 20px;
+        }
+
+        .banner h1 {
+          font-size: 22px;
+        }
+
+        .banner p {
+          font-size: 14px;
+        }
+
+        .content {
+          padding: 20px;
+        }
+
+        .content h2 {
+          font-size: 20px;
+        }
+
+        .feedback-details {
+          padding: 15px;
+        }
+
+        .feedback-details li {
+          flex-direction: column;
+          align-items: flex-start;
+          font-size: 14px;
+        }
+
+        .feedback-details li strong {
+          min-width: auto;
+          margin-bottom: 5px;
+        }
+
+        .cta-button {
+          width: 100%;
+          padding: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class='container'>
+      <!-- Bannière -->
+      <div class='banner'>
+        <h1>Salut {{name}} !</h1>
+        <p>Votre avis nous inspire !</p>
+      </div>
+
+      <!-- Contenu principal -->
+      <div class='content'>
+        <h2>Votre retour sur {{eventName}}</h2>
+        <p class='highlight'>
+          Votre opinion peut améliorer nos futurs événements ! Partagez vos
+          impressions en quelques clics.
+        </p>
+        <div class='feedback-details'>
+          <ul>
+            <li>
+              <img
+                src='https://img.icons8.com/ios-filled/50/0055A4/event.png'
+                alt='Événement'
+              />
+              <strong>Événement :</strong>
+              {{eventName}}
+            </li>
+            <li>
+              <img
+                src='https://img.icons8.com/ios-filled/50/0055A4/date-to.png'
+                alt='Date'
+              />
+              <strong>Date :</strong>
+              {{eventDate}}
+            </li>
+          </ul>
+        </div>
+        <a href='{{reviewLink}}' class='cta-button'>Donner mon avis</a>
+      </div>
+
+      <!-- Pied de page -->
+      <div class='footer'>
+        <p>Cordialement,<br />L'équipe <strong>Tunisie Telecom</strong></p>
+        <p><a href='https://www.tunisietelecom.tn'>Visitez notre site</a>
+          |
+          <a href='mailto:contact@tunisietelecom.tn'>Contactez-nous</a></p>
+        <img
+          src='https://www.tunisietelecom.tn/sites/default/files/logo-tt.png'
+          alt='Tunisie Telecom Logo'
+        />
+      </div>
+    </div>
+  </body>
+</html>

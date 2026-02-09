@@ -1,0 +1,192 @@
+/* Barre de navigation */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0a1124;
+  padding: 10px 20px;
+  border-bottom: 2px solid #00ffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Contenu principal */
+.clubs-content {
+  margin-top: 80px;
+}
+
+/* Conteneur du formulaire */
+
+
+/* Formulaire de modification et d'ajout */
+.edit-form {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  
+}
+
+.edit-form h3 {
+  color: #0a1124;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.edit-form .form-group {
+  margin-bottom: 20px;
+}
+
+.edit-form .form-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #0a1124;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.edit-form input,
+.edit-form select {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #00ffff;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  background-color: #f9f9f9;
+  color: #0a1124;
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+.edit-form input:focus,
+.edit-form select:focus {
+  border-color: #00bfff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+  background-color: #ffffff;
+  color: #0a1124;
+}
+
+.edit-form .form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.edit-form .btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  border: none;
+  color: white;
+}
+
+.edit-form .btn-primary {
+  background-color: #0a1124;
+  margin-right: 100px;
+}
+
+.edit-form .btn-secondary {
+  background-color: #6c757d;
+  margin-left: 10px;
+}
+
+.edit-form .btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tableau des clubs */
+.table-container {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1200px;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #00ffff;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  border: 1px solid #00ffff;
+  padding: 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.table th {
+  background-color: #0e1629;
+  color: #00ffff;
+  font-size: 18px;
+  padding: 15px;
+  text-transform: uppercase;
+}
+
+/* Alternance des couleurs pour les lignes */
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Messages d'alerte */
+.alert {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.alert-danger {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.alert-success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
